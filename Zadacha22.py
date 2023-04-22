@@ -4,3 +4,19 @@
 # Пользователь вводит 2 числа. n — кол-во элементов первого множества. 
 # m — кол-во элементов второго множества. 
 # Затем пользователь вводит сами элементы множеств.
+
+# Метод вернет список чисел, количество и значения которых будут введены с консоли.
+def create_a_list_of_numbers_from_user(): 
+    size = int(input("Введите количество чисел в наборе: "))
+    if size < 1:
+        print("Неверно указан размер списка: введите натуральное число.")
+    else:
+        our_list = list()
+        for i in range(size):
+            our_list.append(int(input("Введите целое число: ")))
+    return our_list
+
+our_n_list = create_a_list_of_numbers_from_user()
+our_m_list = create_a_list_of_numbers_from_user()
+print(our_n_list)
+print(our_m_list)
