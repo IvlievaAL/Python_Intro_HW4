@@ -18,5 +18,8 @@ def create_a_list_of_numbers_from_user():
 
 our_n_list = create_a_list_of_numbers_from_user()
 our_m_list = create_a_list_of_numbers_from_user()
-print(our_n_list)
-print(our_m_list)
+our_n_values= set(our_n_list)
+our_m_values = set(our_m_list)
+values_common_for_both_lists = list(our_n_values.intersection(our_m_values))
+values_common_for_both_lists.sort()
+print(values_common_for_both_lists)
