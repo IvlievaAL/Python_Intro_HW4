@@ -29,8 +29,13 @@ def to_define_our_orchard():
         berries = list()
         for i in range(n):
             berries.append(int(random.random()*100))
-        berries = tuple(set(berries))
+        berries = list(set(berries))
     return berries
 
 our_orchard = to_define_our_orchard()
+sums_of_berries_from_three_bushes = list()
+for i in range(len(our_orchard)-1):
+    sums_of_berries_from_three_bushes.append(our_orchard[i-1]+ our_orchard[i]+our_orchard[i+1])
+sums_of_berries_from_three_bushes.append(our_orchard[-2]+ our_orchard[-1]+our_orchard[0])
 print(our_orchard)
+print(max(sums_of_berries_from_three_bushes))
